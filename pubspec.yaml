@@ -39,6 +39,7 @@ dev_dependencies:
 
   sqflite:
   path_provider:
+  provider:
 
 flutter:
   uses-material-design: true

@@ -1,4 +1,4 @@
-import 'package:save_money_app/database/provider/privider.dart';
+import 'package:save_money_app/database/provider/providers.dart';
 import 'package:save_money_app/model/money.dart';
 
 import 'package:rxdart/rxdart.dart';
@@ -9,7 +9,7 @@ class Bloc {
   Stream<List<Money>> get todoStream => _controller.stream;
 
   getMoneys() async {
-    _controller.sink.add(await Provider.db.getAllMoney());
+    _controller.sink.add(await Providers.db.getAllMoney());
   }
 
   blocs() {
@@ -22,22 +22,22 @@ class Bloc {
 
   create(Money money) {
     money.assignUUID();
-    Provider.db.createMoney(money);
+    Providers.db.createMoney(money);
     getMoneys();
   }
 
   update(Money money) {
-    Provider.db.updateMoney(money);
+    Providers.db.updateMoney(money);
     getMoneys();
   }
 
   delete(String id) {
-    Provider.db.deleteMoney(id);
+    Providers.db.deleteMoney(id);
     getMoneys();
   }
 
   allDelete() {
-    Provider.db.deleteAllTodo();
+    Providers.db.deleteAllTodo();
     getMoneys();
   }
 }

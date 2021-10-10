@@ -5,10 +5,10 @@ import 'package:sqflite/sqflite.dart';
 import 'package:sqflite/sqlite_api.dart';
 import 'package:save_money_app/model/money.dart';
 
-class Provider {
-  Provider._();
+class Providers {
+  Providers._();
 
-  static final Provider db = Provider._();
+  static final Providers db = Providers._();
   static Database? _database;
   static final _tableName = "TODO";
 
