@@ -37,5 +37,8 @@ dev_dependencies:
   #
   rxdart:
 
+  sqflite:
+  path_provider:
+
 flutter:
   uses-material-design: true

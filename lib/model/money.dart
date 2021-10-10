@@ -30,7 +30,7 @@ class Money {
     id = const Uuid().v4();
   }
 
-  factory Money.formMap(Map<String, dynamic> json) => Money(
+  factory Money.fromMap(Map<String, dynamic> json) => Money(
         id: json["id"],
         title: json["title"],
         beforeMoney: json["beforeMoney"],
